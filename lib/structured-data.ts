@@ -51,7 +51,6 @@ export function veterinaryCareJsonLd() {
       postalCode: hospital.postalCode,
       addressCountry: "JP",
     },
-    openingHours: hospital.hours,
     image: `${siteConfig.url}${hospital.image}`,
   };
 }
