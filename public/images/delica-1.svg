@@ -1,0 +1,18 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Photo: Puppily Delica 商品">
+  <defs>
+    <linearGradient id="g-delica-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6E9DE"/>
+      <stop offset="100%" stop-color="#EFD8CE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#g-delica-1)"/>
+  
+    <g opacity="0.16" fill="#6b5a4d">
+      <circle cx="566" cy="744" r="12"/>
+      <circle cx="590" cy="728" r="12"/>
+      <circle cx="614" cy="728" r="12"/>
+      <circle cx="638" cy="744" r="12"/>
+      <ellipse cx="602" cy="772" rx="26" ry="20"/>
+    </g>
+  <text x="50%" y="92%" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="29" fill="#5c5044" opacity="0.55">Photo: Puppily Delica 商品</text>
+</svg>

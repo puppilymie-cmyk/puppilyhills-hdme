@@ -1,0 +1,18 @@
+<svg width="1000" height="1250" viewBox="0 0 1000 1250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Photo: 診察室">
+  <defs>
+    <linearGradient id="g-hospital-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFEAE2"/>
+      <stop offset="100%" stop-color="#DCCFC0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1250" fill="url(#g-hospital-2)"/>
+  
+    <g opacity="0.16" fill="#6b5a4d">
+      <circle cx="466" cy="619" r="12"/>
+      <circle cx="490" cy="603" r="12"/>
+      <circle cx="514" cy="603" r="12"/>
+      <circle cx="538" cy="619" r="12"/>
+      <ellipse cx="502" cy="647" rx="26" ry="20"/>
+    </g>
+  <text x="50%" y="92%" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="24" fill="#5c5044" opacity="0.55">Photo: 診察室</text>
+</svg>

@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --color-white: #ffffff;
+  --color-ivory: #faf6f1;
+  --color-beige: #efe4d6;
+  --color-beige-deep: #ddc9ac;
+  --color-blush: #f6e3e1;
+  --color-blush-deep: #e6b8bb;
+  --color-charcoal: #2c2925;
+  --color-charcoal-soft: #55504a;
+  --color-line: #e7ddce;
+
+  --font-serif-jp: "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "游明朝",
+    "Noto Serif JP", serif;
+  --font-sans-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "YuGothic",
+    "Yu Gothic", "游ゴシック体", "Noto Sans JP", "Meiryo", sans-serif;
+  --font-display: "Cormorant Garamond", "EB Garamond", var(--font-serif-jp);
+}
+
+@theme inline {
+  --color-white: var(--color-white);
+  --color-ivory: var(--color-ivory);
+  --color-beige: var(--color-beige);
+  --color-beige-deep: var(--color-beige-deep);
+  --color-blush: var(--color-blush);
+  --color-blush-deep: var(--color-blush-deep);
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-soft: var(--color-charcoal-soft);
+  --color-line: var(--color-line);
+
+  --font-serif-jp: var(--font-serif-jp);
+  --font-sans-jp: var(--font-sans-jp);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans-jp);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt";
+  letter-spacing: 0.02em;
+}
+
+::selection {
+  background: var(--color-blush);
+  color: var(--color-charcoal);
+}
+
+.font-heading {
+  font-family: var(--font-serif-jp);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-up {
+    animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
