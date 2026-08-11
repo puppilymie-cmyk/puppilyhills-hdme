@@ -28,10 +28,12 @@ export function StoreCard({ store, id }: { store: StoreInfo; id?: string }) {
             <dt className="w-16 shrink-0 text-charcoal-soft/60">電話</dt>
             <dd>{store.tel}</dd>
           </div>
-          <div className="flex gap-3">
-            <dt className="w-16 shrink-0 text-charcoal-soft/60">営業時間</dt>
-            <dd>{store.hours}</dd>
-          </div>
+          {store.hours ? (
+            <div className="flex gap-3">
+              <dt className="w-16 shrink-0 text-charcoal-soft/60">営業時間</dt>
+              <dd>{store.hours}</dd>
+            </div>
+          ) : null}
           <div className="flex gap-3">
             <dt className="w-16 shrink-0 text-charcoal-soft/60">休み</dt>
             <dd>{store.holiday}</dd>
