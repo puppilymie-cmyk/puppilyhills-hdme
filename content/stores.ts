@@ -9,7 +9,7 @@ export interface StoreInfo {
   postalCode: string;
   address: string;
   tel: string;
-  hours: string;
+  hours?: string;
   holiday: string;
   mapEmbedUrl: string;
   mapUrl: string;
@@ -74,7 +74,6 @@ export const stores: StoreInfo[] = [
     postalCode: hospitalAddress.postalCode,
     address: hospitalAddress.address,
     tel: "06-4305-7581",
-    hours: "診療時間はお問い合わせください",
     holiday: "年中無休",
     mapEmbedUrl: mapsQueryUrl(hospitalAddress.postalCode, hospitalAddress.address, true),
     mapUrl: mapsQueryUrl(hospitalAddress.postalCode, hospitalAddress.address),
