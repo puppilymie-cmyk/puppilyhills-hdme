@@ -1,0 +1,18 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Photo: 物販商品3">
+  <defs>
+    <linearGradient id="g-shop-product-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6E9DE"/>
+      <stop offset="100%" stop-color="#EFD8CE"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#g-shop-product-3)"/>
+  
+    <g opacity="0.16" fill="#6b5a4d">
+      <circle cx="416" cy="544" r="12"/>
+      <circle cx="440" cy="528" r="12"/>
+      <circle cx="464" cy="528" r="12"/>
+      <circle cx="488" cy="544" r="12"/>
+      <ellipse cx="452" cy="572" rx="26" ry="20"/>
+    </g>
+  <text x="50%" y="92%" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="22" fill="#5c5044" opacity="0.55">Photo: 物販商品3</text>
+</svg>
