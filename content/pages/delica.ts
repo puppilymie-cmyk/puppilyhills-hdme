@@ -1,8 +1,8 @@
 export const delicaHero = {
   eyebrow: "PUPPILY DELICA",
-  heading: "毎日の食事も、愛情のひとつ。",
+  heading: "小型犬には、これしかない。",
   lead:
-    "Puppily Delicaは、単なるドッグフードではなく、健康を考えて設計された毎日の食事です。おいしさと機能性を両立しながら、愛犬の毎日を内側から支えます。",
+    "Puppily Delicaは、単なるドッグフードではなく、小型犬・超小型犬のためだけに健康を考えて設計された毎日の食事です。おいしさと機能性を両立しながら、愛犬の毎日を内側から支えます。だから、小型犬にはこれしかないと言い切れます。",
   image: "/images/delica-hero.svg",
   imageAlt: "Puppily Delicaの食事",
 };

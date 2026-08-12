@@ -59,8 +59,8 @@ export const hospitalTeaser = {
 
 export const delicaTeaser = {
   eyebrow: "PUPPILY DELICA",
-  heading: "毎日の食事も、愛情のひとつ。",
-  body: "Puppily Delicaは、人間も食べられるレベルの原材料を使い、健康を考えて設計された食事です。毎日の食事から、おいしさと機能性を両立しながら健康を支えます。",
+  heading: "小型犬には、これしかない。",
+  body: "Puppily Delicaは、人間も食べられるレベルの原材料を使い、小型犬・超小型犬のためだけに健康を考えて設計された食事です。毎日の食事から、おいしさと機能性を両立しながら健康を支えます。",
   image: "/images/delica-1.svg",
   imageAlt: "Puppily Delicaの食事",
   cta: { label: "PUPPILY DELICAを見る", href: "/puppily-delica" },
