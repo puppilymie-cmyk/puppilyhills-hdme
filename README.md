@@ -81,7 +81,9 @@ content/                 文章・店舗情報などのデータ(ここを編集
 lib/structured-data.ts    JSON-LD(構造化データ)生成関数
 
 public/images/            仮画像(SVG)。実写に差し替える際はここのファイルを置き換えてください。
+public/line/              LINE公式アカウント用リッチメニュー画像
 scripts/generate-placeholders.mjs  仮画像を生成するスクリプト(参考用)
+scripts/richmenu/         LINEリッチメニューのデザインソース・生成スクリプト・設定(詳細は同ディレクトリのREADME参照)
 ```
 
 ## 写真・文章を差し替える場所

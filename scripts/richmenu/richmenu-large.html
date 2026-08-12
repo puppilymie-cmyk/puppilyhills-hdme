@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Puppily Hills LINE Rich Menu</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 2500px;
+    height: 1686px;
+    background: #faf6f1;
+    font-family: "Liberation Sans", "IPAGothic", "IPAPGothic", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :root {
+    --white: #ffffff;
+    --ivory: #faf6f1;
+    --beige: #efe4d6;
+    --beige-deep: #ddc9ac;
+    --blush: #f6e3e1;
+    --blush-deep: #e6b8bb;
+    --charcoal: #2c2925;
+    --charcoal-soft: #55504a;
+    --line: #e7ddce;
+  }
+
+  .grid {
+    width: 2500px;
+    height: 1686px;
+    display: grid;
+    grid-template-columns: 834px 833px 833px;
+    grid-template-rows: 843px 843px;
+    position: relative;
+  }
+
+  .cell {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .cell.bg-beige { background: var(--beige); }
+  .cell.bg-ivory { background: var(--ivory); }
+  .cell.bg-blush { background: var(--blush); }
+  .cell.bg-charcoal { background: var(--charcoal); }
+
+  /* hairline dividers */
+  .col-a { border-right: 1px solid var(--line); }
+  .col-b { border-right: 1px solid var(--line); }
+  .row-top { border-bottom: 1px solid var(--line); }
+  .bg-charcoal.row-top { border-bottom: 1px solid rgba(0,0,0,0.35); }
+  .col-a.bg-charcoal, .col-b.bg-charcoal { border-right-color: rgba(0,0,0,0.35); }
+
+  .tag {
+    position: absolute;
+    top: 54px;
+    left: 56px;
+    font-family: "Liberation Serif", "DejaVu Serif", serif;
+    font-size: 24px;
+    letter-spacing: 0.14em;
+    color: var(--charcoal-soft);
+    opacity: 0.55;
+  }
+  .cell.bg-charcoal .tag { color: var(--blush); opacity: 0.7; }
+
+  .paw {
+    position: absolute;
+    top: 50px;
+    right: 58px;
+    opacity: 0.14;
+  }
+  .cell.bg-charcoal .paw { opacity: 0.18; }
+
+  .icon-wrap {
+    width: 116px;
+    height: 116px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-wrap svg { width: 100%; height: 100%; }
+
+  .jp {
+    font-size: 66px;
+    font-weight: bold;
+    color: var(--charcoal);
+    letter-spacing: 0.06em;
+    line-height: 1.25;
+    text-align: center;
+  }
+  .cell.bg-charcoal .jp { color: var(--ivory); }
+
+  .en {
+    margin-top: 18px;
+    font-family: "Liberation Serif", "DejaVu Serif", serif;
+    font-style: italic;
+    font-size: 28px;
+    letter-spacing: 0.22em;
+    color: var(--charcoal-soft);
+    text-transform: uppercase;
+  }
+  .cell.bg-charcoal .en { color: var(--blush); }
+
+  .divider {
+    width: 64px;
+    height: 2px;
+    background: var(--beige-deep);
+    margin-top: 26px;
+    margin-bottom: 4px;
+  }
+  .cell.bg-charcoal .divider { background: var(--blush-deep); }
+
+  .cta-badge {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 40px;
+    border: 1.5px solid var(--blush-deep);
+    border-radius: 999px;
+    color: var(--ivory);
+    font-family: "Liberation Serif", "DejaVu Serif", serif;
+    font-style: italic;
+    font-size: 26px;
+    letter-spacing: 0.16em;
+  }
+
+  .wordmark {
+    position: absolute;
+    left: 50%;
+    top: 843px;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 12px 34px;
+    font-family: "Liberation Serif", "DejaVu Serif", serif;
+    font-size: 24px;
+    letter-spacing: 0.3em;
+    color: var(--charcoal-soft);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+  <div class="grid">
+
+    <!-- A1: TRIMMING -->
+    <div class="cell bg-beige col-a row-top">
+      <span class="tag">01</span>
+      <span class="paw">
+        <svg width="70" height="60" viewBox="0 0 70 60" fill="#6b5a4d">
+          <circle cx="18" cy="30" r="8"/><circle cx="34" cy="20" r="8"/>
+          <circle cx="50" cy="20" r="8"/><circle cx="62" cy="32" r="7"/>
+          <ellipse cx="38" cy="44" rx="18" ry="13"/>
+        </svg>
+      </span>
+      <div class="icon-wrap">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#55504a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="16" cy="16" r="7"/>
+          <circle cx="16" cy="48" r="7"/>
+          <line x1="21" y1="21" x2="56" y2="56"/>
+          <line x1="21" y1="43" x2="40" y2="24"/>
+          <line x1="44" y1="20" x2="56" y2="8"/>
+        </svg>
+      </div>
+      <div class="jp">TRIMMING</div>
+      <div class="divider"></div>
+      <div class="en">美容 / Beauty</div>
+    </div>
+
+    <!-- A2: ANIMAL HOSPITAL -->
+    <div class="cell bg-ivory col-b row-top">
+      <span class="tag">02</span>
+      <div class="icon-wrap">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#55504a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10v14a8 8 0 0 0 16 0V10" />
+          <path d="M44 10v10a4 4 0 0 0 8 0v-2" />
+          <path d="M28 24v6a12 12 0 0 0 24 0v-4" />
+          <circle cx="48" cy="40" r="6"/>
+          <line x1="48" y1="37" x2="48" y2="43"/>
+          <line x1="45" y1="40" x2="51" y2="40"/>
+        </svg>
+      </div>
+      <div class="jp">ANIMAL HOSPITAL</div>
+      <div class="divider"></div>
+      <div class="en">医療 / Medical</div>
+    </div>
+
+    <!-- A3: PUPPILY DELICA -->
+    <div class="cell bg-beige row-top">
+      <span class="tag">03</span>
+      <div class="icon-wrap">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#55504a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 30h44a2 2 0 0 1 2 2c0 10-10 18-24 18S8 42 8 32a2 2 0 0 1 2-2z"/>
+          <path d="M32 30V16c6 0 10-4 10-4s2 8-4 12"/>
+        </svg>
+      </div>
+      <div class="jp">PUPPILY DELICA</div>
+      <div class="divider"></div>
+      <div class="en">食 / Food</div>
+    </div>
+
+    <!-- A4: MEMORY & PHOTO -->
+    <div class="cell bg-ivory col-a">
+      <span class="tag">04</span>
+      <div class="icon-wrap">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#55504a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="8" y="18" width="48" height="34" rx="5"/>
+          <path d="M22 18l4-7h12l4 7"/>
+          <circle cx="32" cy="35" r="10"/>
+        </svg>
+      </div>
+      <div class="jp">MEMORY &amp; PHOTO</div>
+      <div class="divider"></div>
+      <div class="en">記憶と記録 / Memory</div>
+    </div>
+
+    <!-- A5: RESERVE (CTA) -->
+    <div class="cell bg-charcoal col-b">
+      <span class="tag">05</span>
+      <span class="paw">
+        <svg width="70" height="60" viewBox="0 0 70 60" fill="#f6e3e1">
+          <circle cx="18" cy="30" r="8"/><circle cx="34" cy="20" r="8"/>
+          <circle cx="50" cy="20" r="8"/><circle cx="62" cy="32" r="7"/>
+          <ellipse cx="38" cy="44" rx="18" ry="13"/>
+        </svg>
+      </span>
+      <div class="jp" style="font-size:60px;">ご予約はこちら</div>
+      <div class="cta-badge">
+        RESERVE NOW
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f6e3e1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="13 6 19 12 13 18"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- A6: ACCESS / SHOP -->
+    <div class="cell bg-blush">
+      <span class="tag">06</span>
+      <div class="icon-wrap">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#55504a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 58S12 40 12 24a20 20 0 0 1 40 0c0 16-20 34-20 34z"/>
+          <circle cx="32" cy="24" r="8"/>
+        </svg>
+      </div>
+      <div class="jp">ACCESS / SHOP</div>
+      <div class="divider"></div>
+      <div class="en">店舗案内・オンラインショップ</div>
+    </div>
+
+  </div>
+
+  <div class="wordmark">Puppily Hills</div>
+</body>
+</html>

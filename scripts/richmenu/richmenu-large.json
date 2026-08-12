@@ -1,0 +1,56 @@
+{
+  "size": { "width": 2500, "height": 1686 },
+  "selected": true,
+  "name": "Puppily Hills Main Menu",
+  "chatBarText": "メニュー",
+  "areas": [
+    {
+      "bounds": { "x": 0, "y": 0, "width": 834, "height": 843 },
+      "action": {
+        "type": "uri",
+        "label": "TRIMMING",
+        "uri": "https://www.puppilyhills.com/trimming"
+      }
+    },
+    {
+      "bounds": { "x": 834, "y": 0, "width": 833, "height": 843 },
+      "action": {
+        "type": "uri",
+        "label": "ANIMAL HOSPITAL",
+        "uri": "https://www.puppilyhills.com/animal-hospital"
+      }
+    },
+    {
+      "bounds": { "x": 1667, "y": 0, "width": 833, "height": 843 },
+      "action": {
+        "type": "uri",
+        "label": "PUPPILY DELICA",
+        "uri": "https://www.puppilyhills.com/puppily-delica"
+      }
+    },
+    {
+      "bounds": { "x": 0, "y": 843, "width": 834, "height": 843 },
+      "action": {
+        "type": "uri",
+        "label": "MEMORY & PHOTO",
+        "uri": "https://www.puppilyhills.com/memory-photo"
+      }
+    },
+    {
+      "bounds": { "x": 834, "y": 843, "width": 833, "height": 843 },
+      "action": {
+        "type": "uri",
+        "label": "RESERVE",
+        "uri": "https://www.puppilyhills.com/contact"
+      }
+    },
+    {
+      "bounds": { "x": 1667, "y": 843, "width": 833, "height": 843 },
+      "action": {
+        "type": "uri",
+        "label": "ACCESS / SHOP",
+        "uri": "https://www.puppilyhills.com/access"
+      }
+    }
+  ]
+}
