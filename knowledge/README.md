@@ -8,11 +8,12 @@ This directory contains persistent project knowledge for Claude Code and other c
 2. BRAND_VOICE.md
 3. PUPPILY_HILLS.md
 4. ANIMAL_HOSPITAL.md
-5. PUPPILY_DELICA.md
-6. INSTAGRAM_STRATEGY.md
-7. REAL_STORIES.md
-8. CONTENT_SAFETY.md
-9. DAILY_WORKFLOW.md
+5. AIM_FELINE_KIDNEY_RESEARCH.md
+6. PUPPILY_DELICA.md
+7. INSTAGRAM_STRATEGY.md
+8. REAL_STORIES.md
+9. CONTENT_SAFETY.md
+10. DAILY_WORKFLOW.md
 
 ## Maintenance
 

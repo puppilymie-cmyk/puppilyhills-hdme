@@ -8,6 +8,7 @@ Read and follow all imported files before writing website copy, social content, 
 @knowledge/BRAND_VOICE.md
 @knowledge/PUPPILY_HILLS.md
 @knowledge/ANIMAL_HOSPITAL.md
+@knowledge/AIM_FELINE_KIDNEY_RESEARCH.md
 @knowledge/PUPPILY_DELICA.md
 @knowledge/INSTAGRAM_STRATEGY.md
 @knowledge/REAL_STORIES.md
