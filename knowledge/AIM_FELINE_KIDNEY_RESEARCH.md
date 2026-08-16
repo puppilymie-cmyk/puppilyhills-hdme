@@ -29,6 +29,29 @@ tract disorders also contribute to feline CKD, and AIM dysfunction should
 not be presented as the sole cause.
 Source: AIM医学研究所 outline page (iamaim.jp/en/outline).
 
+## Molecular mechanism, in more technical detail
+
+For staff/veterinary-facing explanations that need more precision than the
+summary above:
+
+- AIM (CD5L) is a soluble pattern-recognition receptor of the SRCR
+  (scavenger receptor cysteine-rich) superfamily. In circulation it exists
+  bound to pentameric IgM rather than free. Binding to IgM keeps AIM's
+  molecular weight high enough to avoid glomerular filtration and
+  degradation, effectively "locking" it in an inactive reserve state.
+- During acute kidney injury, an injury signal triggers AIM to dissociate
+  from the IgM pentamer. The smaller, freed AIM molecule is then filtered
+  at the glomerulus, reaches the proximal tubule lumen, and binds
+  (opsonin-like) to necrotic cell debris obstructing the tubule. Injured
+  tubular epithelial cells upregulate KIM-1 (kidney injury
+  molecule-1 / TIM-1 / HAVCR1), which recognizes AIM-tagged debris and
+  mediates its phagocytic clearance, relieving luminal obstruction and
+  limiting downstream inflammation/fibrosis.
+- In cats, the AIM–IgM binding affinity/avidity is unusually high, so
+  dissociation on injury is inefficient even when the injury signal is
+  present — the defect is in release, not in AIM synthesis or availability
+  per se.
+
 ## FeliAIM (recombinant AIM therapy)
 
 - FeliAIM is a recombinant AIM protein (rAIM) administered by injection —
@@ -39,8 +62,13 @@ Source: AIM医学研究所 outline page (iamaim.jp/en/outline).
   consistent with IRIS Stage 3b): 6 cats received mouse rAIM, 5 received
   feline rAIM (11 treated total), versus 15 untreated controls, monitored
   over 360 days.
+  - Dosing protocol: 2 mg/animal IV, given every 2 weeks — 6 doses in the
+    mouse-rAIM arm, 12 doses in the feline-rAIM arm. This is an intensive,
+    clinic-administered regimen; a commercial label's dose, interval, and
+    duration may differ and must be re-verified once published.
   - 360-day cumulative survival: approximately 80–83% in the rAIM-treated
-    groups vs. approximately 20% in untreated controls.
+    groups vs. approximately 20% in untreated controls (control median
+    survival 167 days).
   - rAIM also stabilized kidney biomarkers (creatinine, indoxyl sulfate,
     SDMA), reduced systemic inflammatory markers, and restored serum
     sphingomyelin levels in the treated groups.
@@ -84,7 +112,13 @@ approval status on the date of publication.
 - Conditions/contraindications for cats with concurrent renal anemia,
   hyperphosphatemia, or hypertension.
 - Reported adverse events, including immune reactions or anti-drug
-  antibodies.
+  antibodies (ADA) — the preliminary study used a xenogeneic mouse-rAIM
+  arm alongside a feline-rAIM arm; repeated dosing of a non-feline protein
+  carries a theoretical higher immunogenicity/ADA risk than the feline
+  version, and any commercial product's immunogenicity data should be
+  checked before making a safety claim.
+- Pharmacokinetics (half-life, distribution, clearance route) of the
+  approved formulation, which govern the real-world dosing interval.
 - How FeliAIM is positioned alongside existing standard care (renal diet,
   phosphorus control, hydration, blood pressure and proteinuria
   management, potassium correction, antiemetics, anemia treatment) — do
