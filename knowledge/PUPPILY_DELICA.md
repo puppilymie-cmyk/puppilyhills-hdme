@@ -1,3 +1,7 @@
+---
+tags: [brand/delica, pillar/food]
+---
+
 # Puppily Delica
 
 ## Brand concept
@@ -35,3 +39,8 @@ Longer educational or sales content should preserve this meaning:
 No single action makes everything better. Medicine, body care, and daily food all matter. The purpose is not simply to sell a product, but to share the practices genuinely continued to protect the children's lives.
 
 Use owner-approved exact Japanese wording when available.
+
+## Related
+
+- [[OWNER_AND_PHILOSOPHY]]
+- [[CONTENT_SAFETY]]

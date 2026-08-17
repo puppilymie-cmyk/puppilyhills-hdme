@@ -1,3 +1,7 @@
+---
+tags: [brand/hospital, pillar/medical]
+---
+
 # Puppily Animal Hospital
 
 ## Mission
@@ -30,3 +34,9 @@ Before publication, verify:
 ## Emotional frame
 
 Communicate hope, responsibility, and the wish to help each child and family. Personal experiences must come from a separately approved owner source and must never be dramatized for engagement.
+
+## Related
+
+- [[PUPPILY_HILLS]]
+- [[CONTENT_SAFETY]]
+- [[REAL_STORIES]]

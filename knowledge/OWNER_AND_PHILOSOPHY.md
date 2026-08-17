@@ -1,3 +1,7 @@
+---
+tags: [pillar, philosophy]
+---
+
 # Owner and Philosophy
 
 ## Purpose
@@ -37,3 +41,9 @@ Puppily Hills is not merely a trimming salon or retail shop. The complete experi
 - Present medicine, body care, and daily food as complementary.
 - Distinguish verified facts from interpretation.
 - Do not publish private information, medical records, internal disputes, or unapproved stories.
+
+## Related
+
+- [[BRAND_VOICE]]
+- [[PUPPILY_HILLS]]
+- [[CONTENT_SAFETY]]
