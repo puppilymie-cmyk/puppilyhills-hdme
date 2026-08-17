@@ -1,3 +1,7 @@
+---
+tags: [voice, writing]
+---
+
 # Brand Voice
 
 ## Voice identity
@@ -42,3 +46,9 @@ Before presenting copy, confirm:
 - Is every fact verified?
 - Does it create trust rather than merely stimulate a purchase?
 - Would the family feel respected?
+
+## Related
+
+- [[OWNER_AND_PHILOSOPHY]]
+- [[INSTAGRAM_STRATEGY]]
+- [[CONTENT_SAFETY]]

@@ -1,3 +1,7 @@
+---
+tags: [content, instagram]
+---
+
 # Instagram Strategy
 
 ## Objective
@@ -52,3 +56,10 @@ An avatar must be an authorized representation of Mie, not an independent identi
 - Never generate an unverified personal memory or present invented experience as Mie's testimony.
 - Start with human approval before publication.
 - Disclose synthetic media when required by platform rules or when the context could mislead viewers.
+
+## Related
+
+- [[BRAND_VOICE]]
+- [[REAL_STORIES]]
+- [[CONTENT_SAFETY]]
+- [[DAILY_WORKFLOW]]
