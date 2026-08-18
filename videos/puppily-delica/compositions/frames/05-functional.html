@@ -1,12 +1,26 @@
 <template>
   <style>
+    @font-face {
+      font-family: "Noto Serif JP";
+      font-style: normal;
+      font-weight: 400;
+      src: url("assets/fonts/NotoSerifJP-400-05-functional.woff2") format("woff2");
+      unicode-range: U+20, U+44, U+50, U+61, U+63, U+65, U+69, U+6c, U+70, U+75, U+79, U+3001-3002,
+        U+3042, U+3044, U+3048, U+304a-304c, U+304f-305c, U+305f-3060, U+3066-306b, U+306e-3071,
+        U+3078-307a, U+307e, U+3082, U+3084, U+3089-308c, U+3092-3093, U+3099-309a, U+30b5-30b6,
+        U+30c8-30c9, U+30db-30dd, U+30fb-30fc, U+4e0a, U+4e0d-4e0e, U+4e8b, U+4f53, U+4fdd, U+5065,
+        U+5206-5207, U+533b, U+5408, U+5834, U+5927, U+5b89, U+5e2b, U+5eb7, U+6027, U+6210, U+6301,
+        U+652f, U+65e5, U+6a5f, U+6bce, U+6c17, U+6cbb, U+7363, U+75c5, U+7642, U+7652, U+7684,
+        U+76ee, U+76f8, U+7d9a, U+80fd, U+8a3c, U+8abf, U+8ac7, U+914d, U+98df;
+    }
+
     #root {
       position: relative;
       width: 1080px;
       height: 1920px;
       overflow: hidden;
       background: transparent;
-      font-family: serif;
+      font-family: "Noto Serif JP", serif;
     }
 
     #root .clip {
@@ -21,48 +35,38 @@
     #root .func5-main {
       left: 90px;
       width: 900px;
-      top: 760px;
+      top: 800px;
       text-align: center;
-    }
-
-    #root .func5-main div {
-      font-family: serif;
+      font-family: "Noto Serif JP", serif;
       font-weight: 400;
-      font-size: 38px;
-      line-height: 1.4;
+      font-size: 44px;
+      line-height: 1.55;
       color: #2c2925;
       letter-spacing: 0.01em;
-    }
-
-    #root .func5-main div + div {
-      margin-top: 6px;
+      opacity: 0;
     }
 
     #root .func5-disclaimer {
-      left: 130px;
-      width: 820px;
-      top: 564px;
+      left: 140px;
+      width: 800px;
+      top: 720px;
       text-align: center;
-      font-family: serif;
+      font-family: "Noto Serif JP", serif;
       font-weight: 400;
-      font-size: 17px;
-      line-height: 1.6;
+      font-size: 18px;
+      line-height: 1.7;
       color: #55504a;
       letter-spacing: 0.01em;
+      opacity: 0;
     }
   </style>
 
-  <div id="root" data-composition-id="05-functional">
+  <div id="root" data-composition-id="05-functional" data-start="0" data-width="1080" data-height="1920" data-duration="5.5">
     <div class="clip func5-bg" data-start="0" data-duration="5.5" data-track-index="0"></div>
 
-    <div class="clip func5-main" data-start="0.4" data-duration="5.1" data-track-index="1">
-      <div>Made to stay genuinely enjoyable &mdash;</div>
-      <div>with functional ingredients for everyday wellbeing.</div>
-    </div>
+    <div class="clip func5-main" data-start="0.4" data-duration="5.1" data-track-index="1">毎日おいしく食べ続けられることを大切にしながら、健やかな毎日を支える機能性成分を配合しました。</div>
 
-    <div class="clip func5-disclaimer" data-start="2.2" data-duration="3.3" data-track-index="2">
-      Puppily Delica supports everyday health as a food; it is not intended, nor guaranteed, to treat or cure illness. If your dog has an existing condition or health concerns, please consult your veterinarian before feeding.
-    </div>
+    <div class="clip func5-disclaimer" data-start="2.2" data-duration="3.3" data-track-index="2">Puppily Delicaは食事として健康的な毎日をサポートするものであり、病気の治療や治癒を目的・保証するものではありません。持病や体調に不安がある場合は、獣医師にご相談の上でお与えください。</div>
   </div>
 
   <script>
@@ -90,8 +94,8 @@
       );
       tl.fromTo(
         "#root .func5-disclaimer",
-        { opacity: 0, y: 14 },
-        { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" },
+        { opacity: 0, y: 14, top: 720 },
+        { opacity: 1, y: 0, top: 640, duration: 0.6, ease: "power3.out" },
         2.5
       );
 

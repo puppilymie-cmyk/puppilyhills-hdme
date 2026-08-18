@@ -3,109 +3,127 @@
   id="root"
   data-composition-id="03-philosophy"
 >
+  <style>
+    @font-face {
+      font-family: "Noto Serif JP Delica03";
+      src: url("assets/fonts/NotoSerifJP-400-03-philosophy.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      container-type: size;
+    }
+
+    #root .clip {
+      position: absolute;
+    }
+
+    #root .ph3-bg {
+      inset: 0;
+      background: #faf6f1;
+    }
+
+    /* compass-drafted geo ring — atmosphere behind the statement */
+    #root .ph3-ring {
+      left: 50%;
+      top: 940px;
+      width: 720px;
+      height: 720px;
+      margin-left: -360px;
+      margin-top: -360px;
+      border-radius: 50%;
+      border: 1px solid #ddc9ac;
+      opacity: 0;
+    }
+
+    #root .ph3-ring::before {
+      content: "";
+      position: absolute;
+      inset: 12.5%;
+      border-radius: 50%;
+      border: 1px dashed #ddc9ac;
+    }
+
+    #root .ph3-line1 {
+      left: 0;
+      right: 0;
+      top: 462px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0 76px;
+      box-sizing: border-box;
+      text-align: center;
+      opacity: 0;
+    }
+
+    #root .ph3-line1 span {
+      font-family: "Noto Serif JP Delica03", serif;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+      color: #2c2925;
+    }
+
+    #root .ph3-line2 {
+      left: 0;
+      right: 0;
+      top: 840px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      padding: 0 76px;
+      box-sizing: border-box;
+      text-align: center;
+      opacity: 0;
+    }
+
+    #root .ph3-line2 span {
+      font-family: "Noto Serif JP Delica03", serif;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+      color: #2c2925;
+    }
+
+    /* the system's single ink horizontal-accent, used sparingly */
+    #root .ph3-accent {
+      left: 50%;
+      top: 1040px;
+      width: 140px;
+      height: 1px;
+      margin-left: -70px;
+      background: #2c2925;
+      transform-origin: center center;
+      opacity: 0;
+    }
+  </style>
+
   <div class="clip ph3-bg" data-start="0" data-duration="4.5" data-track-index="0"></div>
 
   <div class="clip ph3-ring" data-start="0" data-duration="4.5" data-track-index="1"></div>
 
   <div class="clip ph3-line1" data-start="0" data-duration="4.5" data-track-index="2">
-    <span>Just as with beauty and medical care,</span>
+    <span>美容や医療と同じように、</span>
   </div>
 
   <div class="clip ph3-line2" data-start="0" data-duration="4.5" data-track-index="3">
-    <span>designed from a health-first perspective &mdash;</span>
-    <span>these are everyday meals.</span>
+    <span>「健康」という視点から設計された、</span>
+    <span>毎日のごはんです。</span>
   </div>
 
   <div class="clip ph3-accent" data-start="0" data-duration="4.5" data-track-index="4"></div>
 </div>
-
-<style>
-  #root {
-    position: relative;
-    width: 1080px;
-    height: 1920px;
-    overflow: hidden;
-  }
-
-  #root .ph3-bg {
-    position: absolute;
-    inset: 0;
-    background: #faf6f1;
-  }
-
-  /* compass-drafted geo ring — atmosphere behind the statement */
-  #root .ph3-ring {
-    position: absolute;
-    left: 50%;
-    top: 940px;
-    width: 720px;
-    height: 720px;
-    margin-left: -360px;
-    margin-top: -360px;
-    border-radius: 50%;
-    border: 1px solid #ddc9ac;
-  }
-
-  #root .ph3-ring::before {
-    content: "";
-    position: absolute;
-    inset: 12.5%;
-    border-radius: 50%;
-    border: 1px dashed #ddc9ac;
-  }
-
-  #root .ph3-line1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 462px;
-    display: flex;
-    justify-content: center;
-    padding: 0 76px;
-    text-align: center;
-  }
-
-  #root .ph3-line1 span {
-    font-family: serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1.35;
-    color: #2c2925;
-  }
-
-  #root .ph3-line2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 860px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 0 76px;
-    text-align: center;
-  }
-
-  #root .ph3-line2 span {
-    font-family: serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1.35;
-    color: #2c2925;
-  }
-
-  /* the system's single ink horizontal-accent, used sparingly */
-  #root .ph3-accent {
-    position: absolute;
-    left: 50%;
-    top: 1040px;
-    width: 140px;
-    height: 1px;
-    margin-left: -70px;
-    background: #2c2925;
-    transform-origin: center center;
-  }
-</style>
 
 <script>
   (function () {

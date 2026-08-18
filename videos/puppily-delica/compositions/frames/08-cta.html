@@ -1,12 +1,22 @@
 <template>
   <style>
+    @font-face {
+      font-family: "Noto Serif JP Delica08";
+      font-style: normal;
+      font-weight: 400;
+      src: url("assets/fonts/NotoSerifJP-400-08-cta.woff2") format("woff2");
+      unicode-range: U+300c-300d, U+304b, U+304f, U+3057, U+306e-306f, U+3071, U+3089, U+309a,
+        U+30a3, U+30af, U+30d5, U+30d7, U+30ea-30eb, U+30ed, U+30f3, U+30fc, U+8a73;
+      font-display: block;
+    }
+
     #root {
       position: relative;
       width: 1080px;
       height: 1920px;
       overflow: hidden;
       container-type: size;
-      font-family: sans-serif;
+      container-name: frame;
     }
 
     #root .clip {
@@ -65,7 +75,7 @@
       top: 958px;
       width: 1080px;
       text-align: center;
-      font-family: sans-serif;
+      font-family: "Noto Serif JP Delica08", serif;
       font-weight: 400;
       font-size: 26px;
       letter-spacing: 0.5px;
@@ -99,7 +109,7 @@
     </svg>
 
     <div id="08-cta-line" class="clip" data-start="0" data-duration="3" data-track-index="4">
-      Learn more via the link in bio.
+      「詳しくはプロフィールのリンクから」
     </div>
   </div>
 
