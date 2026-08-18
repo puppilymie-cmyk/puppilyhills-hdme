@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "instagram-reel",
+      "confirmed_in": [
+        "puppily-delica"
+      ],
+      "updated_at": "2026-08-18T13:38:13.304Z"
+    },
+    "aspect": {
+      "value": "1080x1920",
+      "confirmed_in": [
+        "puppily-delica"
+      ],
+      "updated_at": "2026-08-18T13:38:13.360Z"
+    },
+    "language": {
+      "value": "ja",
+      "confirmed_in": [
+        "puppily-delica"
+      ],
+      "updated_at": "2026-08-18T13:38:13.417Z"
+    },
+    "flow": {
+      "value": "automation",
+      "confirmed_in": [
+        "puppily-delica"
+      ],
+      "updated_at": "2026-08-18T13:38:13.475Z"
+    },
+    "storyboard": {
+      "value": "yes",
+      "confirmed_in": [
+        "puppily-delica"
+      ],
+      "updated_at": "2026-08-18T13:38:13.538Z"
+    },
+    "style_preset.product-launch-video": {
+      "value": "cartesian",
+      "confirmed_in": [
+        "puppily-delica"
+      ],
+      "updated_at": "2026-08-18T13:39:08.277Z"
+    }
+  },
+  "sightings": {}
+}
