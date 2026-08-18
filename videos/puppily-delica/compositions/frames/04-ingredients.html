@@ -1,0 +1,124 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Delica Serif JP";
+      src: url("assets/fonts/NotoSerifJP-400-04-ingredients.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      container-type: size;
+      font-family: "Delica Serif JP", serif;
+    }
+
+    #root .clip {
+      position: absolute;
+      inset: 0;
+    }
+
+    /* Scene 1 — full-bleed beige ground (painted on a clip layer, never on #root) */
+    #ingredients-bg {
+      background: #efe4d6;
+    }
+
+    /* Scene 2/3 — one faint compass ring, atmosphere only, behind the line */
+    #ingredients-ring {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #ingredients-ring-shape {
+      position: relative;
+      width: 60cqw;
+      height: 60cqw;
+      border-radius: 50%;
+      border: 0.07cqw solid #ddc9ac;
+    }
+    #ingredients-ring-shape::before {
+      content: "";
+      position: absolute;
+      inset: 13%;
+      border-radius: 50%;
+      border: 0.07cqw dashed #ddc9ac;
+      opacity: 0.7;
+    }
+
+    /* Scene 2/3 — the single line, fades in centered and holds */
+    #ingredients-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 7cqw;
+      transform-origin: 50% 50%;
+    }
+    #ingredients-line p {
+      max-width: 72cqw;
+      margin: 0 auto;
+      text-align: center;
+      color: #2c2925;
+      font-weight: 400;
+      font-size: 8.6cqw;
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+    }
+  </style>
+
+  <div id="root" data-composition-id="04-ingredients" data-width="1080" data-height="1920">
+    <div
+      id="ingredients-bg"
+      class="clip"
+      data-start="0"
+      data-duration="3.5"
+      data-track-index="0"
+    ></div>
+
+    <div
+      id="ingredients-ring"
+      class="clip"
+      data-start="0.4"
+      data-duration="3.1"
+      data-track-index="1"
+    >
+      <div id="ingredients-ring-shape"></div>
+    </div>
+
+    <div
+      id="ingredients-line"
+      class="clip"
+      data-start="0.4"
+      data-duration="3.1"
+      data-track-index="2"
+    >
+      <p>人間も食べられるレベルの原材料を厳選し、</p>
+    </div>
+  </div>
+
+  <script>
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+
+    // Scene 2 (0.4–1.6s): the full line fades in centered, scale ~95%→100%,
+    // power3 ease-out — the one move. The ring breathes in alongside it as
+    // quiet atmosphere, slightly fainter, same window.
+    tl.fromTo(
+      "#ingredients-line",
+      { opacity: 0, scale: 0.95 },
+      { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" },
+      0.4
+    );
+    tl.fromTo(
+      "#ingredients-ring-shape",
+      { opacity: 0 },
+      { opacity: 0.32, duration: 1.2, ease: "power3.out" },
+      0.4
+    );
+
+    // Scene 3 (1.6–3.5s): holds still, dead-center — no second phase.
+    window.__timelines["04-ingredients"] = tl;
+  </script>
+</template>

@@ -1,0 +1,162 @@
+<template>
+<div
+  id="root"
+  data-composition-id="03-philosophy"
+>
+  <div class="clip ph3-bg" data-start="0" data-duration="4.5" data-track-index="0"></div>
+
+  <div class="clip ph3-ring" data-start="0" data-duration="4.5" data-track-index="1"></div>
+
+  <div class="clip ph3-line1" data-start="0" data-duration="4.5" data-track-index="2">
+    <span>Just as with beauty and medical care,</span>
+  </div>
+
+  <div class="clip ph3-line2" data-start="0" data-duration="4.5" data-track-index="3">
+    <span>designed from a health-first perspective &mdash;</span>
+    <span>these are everyday meals.</span>
+  </div>
+
+  <div class="clip ph3-accent" data-start="0" data-duration="4.5" data-track-index="4"></div>
+</div>
+
+<style>
+  #root {
+    position: relative;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+  }
+
+  #root .ph3-bg {
+    position: absolute;
+    inset: 0;
+    background: #faf6f1;
+  }
+
+  /* compass-drafted geo ring — atmosphere behind the statement */
+  #root .ph3-ring {
+    position: absolute;
+    left: 50%;
+    top: 940px;
+    width: 720px;
+    height: 720px;
+    margin-left: -360px;
+    margin-top: -360px;
+    border-radius: 50%;
+    border: 1px solid #ddc9ac;
+  }
+
+  #root .ph3-ring::before {
+    content: "";
+    position: absolute;
+    inset: 12.5%;
+    border-radius: 50%;
+    border: 1px dashed #ddc9ac;
+  }
+
+  #root .ph3-line1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 462px;
+    display: flex;
+    justify-content: center;
+    padding: 0 76px;
+    text-align: center;
+  }
+
+  #root .ph3-line1 span {
+    font-family: serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.35;
+    color: #2c2925;
+  }
+
+  #root .ph3-line2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 860px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 0 76px;
+    text-align: center;
+  }
+
+  #root .ph3-line2 span {
+    font-family: serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.35;
+    color: #2c2925;
+  }
+
+  /* the system's single ink horizontal-accent, used sparingly */
+  #root .ph3-accent {
+    position: absolute;
+    left: 50%;
+    top: 1040px;
+    width: 140px;
+    height: 1px;
+    margin-left: -70px;
+    background: #2c2925;
+    transform-origin: center center;
+  }
+</style>
+
+<script>
+  (function () {
+    if (typeof gsap === "undefined") return;
+
+    window.__timelines = window.__timelines || {};
+
+    var tl = gsap.timeline({ paused: true });
+
+    /* Scene 1 (0.0-0.4s): static ivory canvas, empty. Nothing scheduled yet. */
+
+    /* Scene 2 (0.4-1.8s): geo ring settles in as atmosphere; line 1 fades in
+       centered, upper-third, scale 95% -> 100%; holds. */
+    tl.fromTo(
+      "#root .ph3-ring",
+      { opacity: 0 },
+      { opacity: 0.32, duration: 0.6, ease: "power1.out" },
+      0.4
+    );
+    tl.fromTo(
+      "#root .ph3-line1",
+      { opacity: 0, scale: 0.95 },
+      { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" },
+      0.4
+    );
+
+    /* Scene 3 (1.8-4.5s): line 1 translates up and fades as the two-line
+       benefit statement slide-up-crossfades into center on the same upward
+       move, then holds to the end. */
+    tl.to(
+      "#root .ph3-line1",
+      { opacity: 0, y: -40, duration: 0.5, ease: "power2.inOut" },
+      1.8
+    );
+    tl.fromTo(
+      "#root .ph3-line2",
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 0.5, ease: "power2.inOut" },
+      1.8
+    );
+
+    /* a quiet closing accent lands in the back half of the shot, after the
+       benefit statement has settled — keeps the back 50% still arriving. */
+    tl.fromTo(
+      "#root .ph3-accent",
+      { opacity: 0, scaleX: 0 },
+      { opacity: 1, scaleX: 1, duration: 0.5, ease: "power2.out" },
+      2.5
+    );
+
+    window.__timelines["03-philosophy"] = tl;
+  })();
+</script>
+</template>

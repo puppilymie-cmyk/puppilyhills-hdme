@@ -3,7 +3,7 @@ version: alpha
 name: Cartesian — Frame (video / frame layer)
 description: >
   Video-first companion to Cartesian's design.md. The unit is the frame (1920×1080). Atoms are
-  identical and sacred — the five-tone warm-stone palette, Hiragino Mincho ProN 400 + Hiragino Mincho ProN, the
+  identical and sacred — the five-tone warm-stone palette, Noto Serif JP 400 + Noto Serif JP, the
   universal 1px taupe hairline as the only structural device, compass-drafted geometric rings,
   and zero shadow / zero fill. Composition, frame scale, and aspect-ratio behavior are rewritten
   for the frame. Restraint is the rule; motion is out of scope.
@@ -20,22 +20,22 @@ colors:
   white-overlay: "rgba(255,255,255,0.3)"
 
 typography:
-  # — reading ramp (Hiragino Mincho ProN) —
-  body:        { fontFamily: "Hiragino Mincho ProN", cqw: 1.0,  weight: 400, lineHeight: 1.6, color: "text-secondary" }
-  body-sm:     { fontFamily: "Hiragino Mincho ProN", cqw: 0.85, weight: 400, lineHeight: 1.6 }
-  subtitle:    { fontFamily: "Hiragino Mincho ProN", cqw: 1.3,  weight: 400, lineHeight: 1.5 }
-  label:       { fontFamily: "Hiragino Mincho ProN", px: 14, weight: 500, tracking: "3px", upper: true, color: "accent" }
-  attribution: { fontFamily: "Hiragino Mincho ProN", px: 15, weight: 400, tracking: "2px", upper: true, color: "accent" }
-  micro:       { fontFamily: "Hiragino Mincho ProN", px: 12, weight: 400, tracking: "2px", upper: true, color: "accent" }
-  # — display / hero ramp (Hiragino Mincho ProN 400, sentence case) —
-  h3:          { fontFamily: "Hiragino Mincho ProN", cqw: 1.8, weight: 400, lineHeight: 1.1 }
-  timeline-headline:{ fontFamily: "Hiragino Mincho ProN", cqw: 1.9, weight: 400, lineHeight: 1.1 }
-  card-headline:{ fontFamily: "Hiragino Mincho ProN", cqw: 2.0, weight: 400, lineHeight: 1.15 }
-  stat-figure: { fontFamily: "Hiragino Mincho ProN", cqw: 3.0, weight: 400, lineHeight: 1.0 }
-  quote-mark:  { fontFamily: "Hiragino Mincho ProN", cqw: 9.0, weight: 400, lineHeight: 0.5, color: "line" }
-  h2:          { fontFamily: "Hiragino Mincho ProN", cqw: 4.0, weight: 400, lineHeight: 1.1 }
-  h1:          { fontFamily: "Hiragino Mincho ProN", cqw: 6.2, weight: 400, lineHeight: 1.06 }
-  display:     { fontFamily: "Hiragino Mincho ProN", cqw: 8.0, weight: 400, lineHeight: 1.04 }
+  # — reading ramp (Noto Serif JP) —
+  body:        { fontFamily: "Noto Serif JP", cqw: 1.0,  weight: 400, lineHeight: 1.6, color: "text-secondary" }
+  body-sm:     { fontFamily: "Noto Serif JP", cqw: 0.85, weight: 400, lineHeight: 1.6 }
+  subtitle:    { fontFamily: "Noto Serif JP", cqw: 1.3,  weight: 400, lineHeight: 1.5 }
+  label:       { fontFamily: "Noto Serif JP", px: 14, weight: 500, tracking: "3px", upper: true, color: "accent" }
+  attribution: { fontFamily: "Noto Serif JP", px: 15, weight: 400, tracking: "2px", upper: true, color: "accent" }
+  micro:       { fontFamily: "Noto Serif JP", px: 12, weight: 400, tracking: "2px", upper: true, color: "accent" }
+  # — display / hero ramp (Noto Serif JP 400, sentence case) —
+  h3:          { fontFamily: "Noto Serif JP", cqw: 1.8, weight: 400, lineHeight: 1.1 }
+  timeline-headline:{ fontFamily: "Noto Serif JP", cqw: 1.9, weight: 400, lineHeight: 1.1 }
+  card-headline:{ fontFamily: "Noto Serif JP", cqw: 2.0, weight: 400, lineHeight: 1.15 }
+  stat-figure: { fontFamily: "Noto Serif JP", cqw: 3.0, weight: 400, lineHeight: 1.0 }
+  quote-mark:  { fontFamily: "Noto Serif JP", cqw: 9.0, weight: 400, lineHeight: 0.5, color: "line" }
+  h2:          { fontFamily: "Noto Serif JP", cqw: 4.0, weight: 400, lineHeight: 1.1 }
+  h1:          { fontFamily: "Noto Serif JP", cqw: 6.2, weight: 400, lineHeight: 1.06 }
+  display:     { fontFamily: "Noto Serif JP", cqw: 8.0, weight: 400, lineHeight: 1.04 }
 
 spacing:
   pad-x: "7cqw"
@@ -106,7 +106,8 @@ components:
 
 This is the **cartesian** preset remixed onto the captured brand. The YAML frontmatter above (colors · typography · components) is **normative and already correct — use it verbatim.** The prose below is the ORIGINAL preset's intent; read it THROUGH the frontmatter:
 
-- **Fonts** — already set to **Hiragino Mincho ProN** (display) / **Yu Mincho** (body); ignore any preset font name lingering in prose.
+- **Fonts** — **Noto Serif JP** for both display and body. Correction from the initial brand-remix pass: the site's own font stack ("Hiragino Mincho ProN, Yu Mincho, serif") lists a macOS-only proprietary serif with no bundled or locally-installed equivalent in this render environment (verified: no Japanese serif font file exists anywhere on this system, only IPAGothic sans locally and no serif JP face at all). Noto Serif JP is NOT in `hyperframes-creative/references/typography.md`'s pre-bundled set (only Noto Sans JP is bundled there) — but it IS a real Google Font, and Frame 2's worker already proved the working path in this exact project: fetch it once, save it as a local `.woff2` under `assets/fonts/`, and declare it via a local `@font-face` (see `compositions/frames/02-product-intro.html` for the reference implementation). Do this rather than relying on an implicit/un-embedded font name. Ignore any other preset font name lingering in prose below.
+- **Reuse the one shared file** — Frame 2 already fetched `assets/fonts/NotoSerifJP-400-02-product-intro.woff2`. Later frames should reuse that same file (rename/copy to a shared `assets/fonts/NotoSerifJP-400.woff2` if convenient) rather than each re-fetching a separate copy; only fetch fresh if no local copy exists yet.
 - **Colors** — use the frontmatter hex; preset color NAMES in prose (e.g. "cobalt", "cream") mean the remapped brand values.
 
 
@@ -118,8 +119,8 @@ fills (save the faint white-overlay card), no shadows, no rounded rectangles. Hi
 **type contrast and negative space**, and atmosphere from **compass-drafted geometric rings**
 drifting behind content.
 
-The voice is a literary pairing: **Hiragino Mincho ProN** at weight 400 (the thin-stroke didone, never
-bold, always sentence case) carries every headline, numeral, and quote mark in ink; **Hiragino Mincho ProN**
+The voice is a literary pairing: **Noto Serif JP** at weight 400 (the thin-stroke didone, never
+bold, always sentence case) carries every headline, numeral, and quote mark in ink; **Noto Serif JP**
 carries body in warm gray and labels in uppercase taupe with 2–3px tracking. The palette is five
 warm stones plus ink — no populist accent color exists. The correct density is **sparse and
 breathing**: one clear idea, well-framed, on stone paper.
@@ -127,7 +128,7 @@ breathing**: one clear idea, well-framed, on stone paper.
 **Key characteristics at frame scale:**
 
 - **1px taupe hairline** as the universal structural device — every separator is this one line.
-- **Hiragino Mincho ProN 400** (ink, sentence case) for display; **Hiragino Mincho ProN** body (gray) + labels (taupe, tracked).
+- **Noto Serif JP 400** (ink, sentence case) for display; **Noto Serif JP** body (gray) + labels (taupe, tracked).
 - **Five warm stones + ink** — no red/blue/green; the only "color" is type contrast.
 - **Compass-drafted geometric rings** (solid + dashed, 20–50% opacity) behind content for mood.
 - **Flat** — zero shadow, zero rounded rectangle (circles only); the lone ink line is the `horizontal-accent`.
@@ -163,18 +164,18 @@ accent** — when emphasis is needed, grow the type, switch sans→serif, or add
 
 ## Typography
 
-Two ramps. The **reading ramp** (Hiragino Mincho ProN body 1.0cqw gray, labels in px taupe) carries copy + chrome;
+Two ramps. The **reading ramp** (Noto Serif JP body 1.0cqw gray, labels in px taupe) carries copy + chrome;
 the **display ramp** (Playfair `h3` 1.8cqw → `display` 8.0cqw, all weight 400) carries every headline.
 
 - **Legibility floor:** any load-bearing line ≥ **1.4cqw**; px labels are chrome only.
 - **Fit-to-measure:** size the headline to its length. Cap the block at **≤ 78cqw**; ≤3 words → `display`/`h1`; 4–6 → `h2`; 7+ → `h3`. Cartesian has no hero-stat numeral — stats stay modest (`stat-figure` 3cqw).
-- **Playfair at 400, ink, sentence case** — never bold, never uppercase, never taupe. **Hiragino Mincho ProN labels uppercase, 2–3px tracked, taupe.** Italic via Playfair italic for emphasis only.
+- **Playfair at 400, ink, sentence case** — never bold, never uppercase, never taupe. **Noto Serif JP labels uppercase, 2–3px tracked, taupe.** Italic via Playfair italic for emphasis only.
 
 ## Depth & Surface
 
 The flat plane is the only technique. Hierarchy from:
 
-- **Type contrast** — Playfair serif vs Hiragino Mincho ProN sans; the 8cqw→0.7cqw scale.
+- **Type contrast** — Playfair serif vs Noto Serif JP sans; the 8cqw→0.7cqw scale.
 - **1px taupe hairlines** — every divider, card outline, timeline rule, photo ring.
 - **Tone** — ink vs gray vs taupe.
 - **Negative space** — generous padding.
@@ -202,7 +203,7 @@ The flat plane is the only technique. Hierarchy from:
 
 ### 1 · Cover (identity · move: serif + compass ring · left)
 
-**Ground** `{colors.bg-primary}`, `pad-x`. **Composes** geo-ring (right, ~34cqw, solid+dashed), vertical-line (left), label, display/h1. **Focal** a 2–3 line Playfair `display`/`h1` headline in ink (italic on the key word), left-anchored, with a taupe `label` above and an Hiragino Mincho ProN subtitle below. **Chrome** optional bottom meta row (Playfair value + taupe label). **Accent** the geo ring; optionally one `horizontal-accent` ink line (if it clears the meta). **Silence** ~55% empty. **Fixed** Playfair 400 ink sentence-case, ≤2 geo elements, 1px lines. **Free** title, ring placement, meta. **Density** sparse.
+**Ground** `{colors.bg-primary}`, `pad-x`. **Composes** geo-ring (right, ~34cqw, solid+dashed), vertical-line (left), label, display/h1. **Focal** a 2–3 line Playfair `display`/`h1` headline in ink (italic on the key word), left-anchored, with a taupe `label` above and an Noto Serif JP subtitle below. **Chrome** optional bottom meta row (Playfair value + taupe label). **Accent** the geo ring; optionally one `horizontal-accent` ink line (if it clears the meta). **Silence** ~55% empty. **Fixed** Playfair 400 ink sentence-case, ≤2 geo elements, 1px lines. **Free** title, ring placement, meta. **Density** sparse.
 
 ### 2 · Agenda / Index (index · move: hairline list · left)
 
@@ -218,7 +219,7 @@ The flat plane is the only technique. Hierarchy from:
 
 ### 5 · Two-Column Editorial (content · move: asymmetric split · left)
 
-**Ground** `{colors.bg-primary}`, `pad-x`, two columns with `gap-xl`. **Composes** label, h2, body, image-placeholder (crossed-X) or card. **Focal** a Playfair `h2` + Hiragino Mincho ProN body in the text column; an image-placeholder or card in the other. **Accent** none. **Silence** generous gutter. **Fixed** 1px taupe card/placeholder borders, white-overlay fill. **Free** which side is text, body copy. **Density** standard.
+**Ground** `{colors.bg-primary}`, `pad-x`, two columns with `gap-xl`. **Composes** label, h2, body, image-placeholder (crossed-X) or card. **Focal** a Playfair `h2` + Noto Serif JP body in the text column; an image-placeholder or card in the other. **Accent** none. **Silence** generous gutter. **Fixed** 1px taupe card/placeholder borders, white-overlay fill. **Free** which side is text, body copy. **Density** standard.
 
 ### 6 · Stats / Timeline (data · move: hairline rail · left)
 
@@ -281,6 +282,6 @@ Stats and timeline years carry placeholders until the script supplies them. Agen
 ## Known Gaps
 
 - **Motion intentionally out of scope.** frame.md specifies composition only; the 0.6s fade in the source is a deck mechanic.
-- **Hiragino Mincho ProN + Hiragino Mincho ProN via Google Fonts.** CJK pairing (Noto Serif SC 700/400) carries over; Playfair has no Hanzi italic — substitute weight/taupe for emphasis.
+- **Noto Serif JP for both ramps (display and body), self-hosted locally.** This is a corrected, working substitution — the original preset's serif/sans display/body pairing (Playfair Display / Inter) has no Japanese equivalent shipped anywhere in this environment, and neither Hiragino Mincho ProN nor Yu Mincho is installed or bundled here. Don't just name "Noto Serif JP" in `font-family` and hope — Frames 2 and 6 already proved the working path in this exact project: fetch a glyph-subset Noto Serif JP woff2 from Google Fonts' `css2` API for the frame's exact text, save it under `assets/fonts/`, and point a local `@font-face` at that file (see `compositions/frames/02-product-intro.html` or `06-taste.html` for a working reference implementation). Frame workers: write the ACTUAL Japanese copy from the storyboard's `scene` field verbatim — never translate to English and never substitute a placeholder; two frames already proved this is achievable in this environment, so it is not an acceptable fallback for the rest.
 - **9:16 / 1:1 are guidance**; verify the legibility floor and that the timeline collapses to a vertical list.
 - Geo rings, the crossed-X placeholder, and the dashed inner ring are CSS-only; no external imagery is required.

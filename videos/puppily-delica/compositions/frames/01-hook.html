@@ -1,0 +1,121 @@
+<template>
+  <div id="root" data-composition-id="01-hook">
+    <style>
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        container-type: size;
+        container-name: frame;
+      }
+
+      #root .clip {
+        position: absolute;
+      }
+
+      /* full-bleed ground — never on #root itself */
+      #hook-bg {
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 1920px;
+        background: #faf6f1;
+      }
+
+      /* compass-drafted geo ring — one, per frame.md restraint rule */
+      #hook-ring {
+        left: 50%;
+        top: 800px;
+        width: 620px;
+        height: 620px;
+        margin-left: -310px;
+        margin-top: -310px;
+        border-radius: 50%;
+        border: 1px solid #ddc9ac;
+        opacity: 0;
+      }
+      #hook-ring::before {
+        content: "";
+        position: absolute;
+        inset: 12%;
+        border-radius: 50%;
+        border: 1px dashed #ddc9ac;
+        opacity: 0.7;
+      }
+
+      #hook-line1,
+      #hook-line2 {
+        left: 0;
+        width: 1080px;
+        text-align: center;
+        font-family: serif;
+        font-weight: 400;
+        color: #2c2925;
+        letter-spacing: 0.3px;
+        opacity: 0;
+      }
+
+      #hook-line1 {
+        top: 560px;
+        font-size: 76px;
+        line-height: 1.25;
+      }
+
+      #hook-line2 {
+        top: 900px;
+        font-size: 88px;
+        line-height: 1.2;
+      }
+    </style>
+
+    <div id="hook-bg" class="clip" data-start="0" data-duration="4" data-track-index="0"></div>
+
+    <div id="hook-ring" class="clip" data-start="0" data-duration="4" data-track-index="1"></div>
+
+    <div id="hook-line1" class="clip" data-start="0" data-duration="4" data-track-index="2">Daily meals, too —</div>
+
+    <div id="hook-line2" class="clip" data-start="0" data-duration="4" data-track-index="3">an act of love.</div>
+
+    <script>
+      (function () {
+        window.__timelines = window.__timelines || {};
+        var tl = gsap.timeline({ paused: true });
+
+        // Scene 1 (0.0–0.4s): static ivory canvas, nothing on screen yet — no tweens here.
+
+        // Scene 2 (0.4–1.6s): line 1 fades in centered, upper-third, scaling ~95%→100%.
+        tl.fromTo(
+          "#hook-ring",
+          { opacity: 0 },
+          { opacity: 0.28, duration: 0.7, ease: "power2.out" },
+          0.4
+        );
+
+        tl.fromTo(
+          "#hook-line1",
+          { opacity: 0, scale: 0.95 },
+          { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out", transformOrigin: "50% 50%" },
+          0.4
+        );
+        // holds static from ~1.0s to 1.6s (no further motion)
+
+        // Scene 3 (1.6–4.0s): line 1 lifts and fades out as line 2 slide-up-crossfades to center; holds to end.
+        tl.to(
+          "#hook-line1",
+          { opacity: 0, y: -24, duration: 0.4, ease: "power2.inOut" },
+          1.6
+        );
+        tl.fromTo(
+          "#hook-line2",
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+          1.6
+        );
+        // line 2 holds still, fully visible, through 4.0s — no exit tween (non-final frame).
+
+        window.__timelines["01-hook"] = tl;
+      })();
+    </script>
+  </div>
+</template>

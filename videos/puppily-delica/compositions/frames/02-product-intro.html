@@ -1,0 +1,91 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Noto Serif JP Delica02";
+      src: url("assets/fonts/NotoSerifJP-400-02-product-intro.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      container-type: size;
+      background: transparent;
+      font-family: "Noto Serif JP Delica02", serif;
+    }
+
+    .clip {
+      position: absolute;
+    }
+
+    #pi2-bg {
+      inset: 0;
+      background-color: #efe4d6;
+    }
+
+    .pi2-line {
+      left: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      padding: 0 7cqw;
+      color: #2c2925;
+      font-weight: 400;
+      font-size: 4cqw;
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+      opacity: 0;
+    }
+
+    #pi2-line1 {
+      top: 460px;
+    }
+
+    #pi2-line2 {
+      top: 936px;
+    }
+  </style>
+
+  <div id="root" data-composition-id="02-product-intro" data-start="0" data-width="1080" data-height="1920" data-duration="3.5">
+    <div id="pi2-bg" class="clip" data-start="0" data-duration="3.5" data-track-index="0"></div>
+
+    <div id="pi2-line1" class="clip pi2-line" data-start="0" data-duration="3.5" data-track-index="1">Puppily Delicaは、</div>
+
+    <div id="pi2-line2" class="clip pi2-line" data-start="0" data-duration="3.5" data-track-index="2">ただのドッグフードではありません。</div>
+  </div>
+
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+
+    // Scene 1 (0.0-0.3s): static beige canvas, empty — no tweens needed.
+
+    // Scene 2 (0.3-1.4s): line 1 fades in centered, upper third, scale ~95% -> 100%, then holds.
+    tl.fromTo(
+      "#pi2-line1",
+      { opacity: 0, scale: 0.95 },
+      { opacity: 1, scale: 1, duration: 0.75, ease: "power3.out" },
+      0.3
+    );
+
+    // Scene 3 (1.4-3.5s): line 1 translates up and fades while line 2 slide-up-crossfades to
+    // center, then holds to the end.
+    tl.to(
+      "#pi2-line1",
+      { y: -32, opacity: 0, duration: 0.6, ease: "power2.inOut" },
+      1.4
+    );
+    tl.fromTo(
+      "#pi2-line2",
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+      1.4
+    );
+
+    window.__timelines["02-product-intro"] = tl;
+  </script>
+</template>
