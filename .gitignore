@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# agent tooling (video-generation skills, unrelated to site source)
+/.agents/
+/.claude/
+/skills-lock.json
+/videos/
