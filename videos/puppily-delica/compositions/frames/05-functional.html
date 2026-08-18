@@ -1,0 +1,103 @@
+<template>
+  <style>
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: transparent;
+      font-family: serif;
+    }
+
+    #root .clip {
+      position: absolute;
+    }
+
+    #root .func5-bg {
+      inset: 0;
+      background: #faf6f1;
+    }
+
+    #root .func5-main {
+      left: 90px;
+      width: 900px;
+      top: 760px;
+      text-align: center;
+    }
+
+    #root .func5-main div {
+      font-family: serif;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 1.4;
+      color: #2c2925;
+      letter-spacing: 0.01em;
+    }
+
+    #root .func5-main div + div {
+      margin-top: 6px;
+    }
+
+    #root .func5-disclaimer {
+      left: 130px;
+      width: 820px;
+      top: 564px;
+      text-align: center;
+      font-family: serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #55504a;
+      letter-spacing: 0.01em;
+    }
+  </style>
+
+  <div id="root" data-composition-id="05-functional">
+    <div class="clip func5-bg" data-start="0" data-duration="5.5" data-track-index="0"></div>
+
+    <div class="clip func5-main" data-start="0.4" data-duration="5.1" data-track-index="1">
+      <div>Made to stay genuinely enjoyable &mdash;</div>
+      <div>with functional ingredients for everyday wellbeing.</div>
+    </div>
+
+    <div class="clip func5-disclaimer" data-start="2.2" data-duration="3.3" data-track-index="2">
+      Puppily Delica supports everyday health as a food; it is not intended, nor guaranteed, to treat or cure illness. If your dog has an existing condition or health concerns, please consult your veterinarian before feeding.
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+
+      // Scene 1 (0.0-0.4s): static ivory canvas, empty — no tweens here.
+
+      // Scene 2 (0.4-2.2s): the main line fades in centered, upper-middle, scale ~95% -> 100%;
+      // holds alone.
+      tl.fromTo(
+        "#root .func5-main",
+        { opacity: 0, scale: 0.95, transformOrigin: "50% 50%" },
+        { opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" },
+        0.4
+      );
+
+      // Scene 3 (2.2-3.2s): main line translates up to upper-third, making room (not exiting) —
+      // the disclaimer fades in beneath it, small charcoal-soft type, ~40% the main line's size.
+      tl.to(
+        "#root .func5-main",
+        { top: 380, duration: 0.7, ease: "power3.inOut" },
+        2.2
+      );
+      tl.fromTo(
+        "#root .func5-disclaimer",
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" },
+        2.5
+      );
+
+      // Scene 4 (3.2-5.5s): both lines hold together, fully legible, to the end — no further motion.
+
+      window.__timelines["05-functional"] = tl;
+    })();
+  </script>
+</template>

@@ -1,6 +1,14 @@
 <template>
   <div id="root" data-composition-id="01-hook">
     <style>
+      @font-face {
+        font-family: "Noto Serif JP Hook01";
+        src: url("assets/fonts/NotoSerifJP-400-01-hook.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: block;
+      }
+
       #root {
         position: relative;
         width: 1080px;
@@ -49,10 +57,10 @@
         left: 0;
         width: 1080px;
         text-align: center;
-        font-family: serif;
+        font-family: "Noto Serif JP Hook01", serif;
         font-weight: 400;
         color: #2c2925;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.02em;
         opacity: 0;
       }
 
@@ -73,9 +81,9 @@
 
     <div id="hook-ring" class="clip" data-start="0" data-duration="4" data-track-index="1"></div>
 
-    <div id="hook-line1" class="clip" data-start="0" data-duration="4" data-track-index="2">Daily meals, too —</div>
+    <div id="hook-line1" class="clip" data-start="0" data-duration="4" data-track-index="2">毎日の食事も、</div>
 
-    <div id="hook-line2" class="clip" data-start="0" data-duration="4" data-track-index="3">an act of love.</div>
+    <div id="hook-line2" class="clip" data-start="0" data-duration="4" data-track-index="3">愛情のひとつ。</div>
 
     <script>
       (function () {

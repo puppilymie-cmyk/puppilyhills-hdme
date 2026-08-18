@@ -1,5 +1,15 @@
 <template>
   <style>
+    @font-face {
+      font-family: "Noto Serif JP Delica07";
+      src: url("assets/fonts/NotoSerifJP-400-07-payoff.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+      unicode-range: U+3001-3002, U+3046, U+304b-304c, U+3053-3054, U+3064-3065, U+306a-306b,
+        U+306e-3070, U+3088, U+308b, U+3093-3094, U+3099, U+4eca, U+5143, U+65e5, U+660e, U+6c17;
+    }
+
     #root {
       position: relative;
       width: 100%;
@@ -45,16 +55,12 @@
       width: 70cqw;
       opacity: 0;
       text-align: center;
-      font-family: serif;
+      font-family: "Noto Serif JP Delica07", serif;
       font-weight: 400;
-      font-size: 4.4cqw;
-      line-height: 1.4;
+      font-size: 6.4cqw;
+      line-height: 1.7;
       letter-spacing: 0.01em;
       color: #2c2925;
-    }
-
-    #root .payoff-line-inner em {
-      font-style: italic;
     }
   </style>
 
@@ -83,9 +89,7 @@
       data-duration="2.7"
       data-track-index="2"
     >
-      <div class="payoff-line-inner">
-        Today&rsquo;s care becomes <em>tomorrow&rsquo;s</em> health.
-      </div>
+      <div class="payoff-line-inner">今日のごはんが、明日の元気につながるように。</div>
     </div>
   </div>
 
