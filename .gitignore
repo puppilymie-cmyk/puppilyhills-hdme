@@ -45,3 +45,6 @@ next-env.d.ts
 /.agents
 /.claude
 /skills-lock.json
+
+# HyperFrames per-frame debug snapshots (regenerate with `npx hyperframes snapshot`); keep the contact sheets
+videos/*/snapshots/frame-*.png

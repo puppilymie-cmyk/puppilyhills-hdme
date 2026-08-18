@@ -49,7 +49,7 @@
     #root .func5-disclaimer {
       left: 140px;
       width: 800px;
-      top: 720px;
+      top: 640px;
       text-align: center;
       font-family: "Noto Serif JP", serif;
       font-weight: 400;
@@ -61,12 +61,12 @@
     }
   </style>
 
-  <div id="root" data-composition-id="05-functional" data-start="0" data-width="1080" data-height="1920" data-duration="5.5">
-    <div class="clip func5-bg" data-start="0" data-duration="5.5" data-track-index="0"></div>
+  <div id="root" data-composition-id="05-functional" data-start="0" data-width="1080" data-height="1920" data-duration="6">
+    <div class="clip func5-bg" data-start="0" data-duration="6" data-track-index="0"></div>
 
-    <div class="clip func5-main" data-start="0.4" data-duration="5.1" data-track-index="1">毎日おいしく食べ続けられることを大切にしながら、健やかな毎日を支える機能性成分を配合しました。</div>
+    <div class="clip func5-main" data-start="0.4" data-duration="5.6" data-track-index="1">毎日おいしく食べ続けられることを大切にしながら、健やかな毎日を支える機能性成分を配合しました。</div>
 
-    <div class="clip func5-disclaimer" data-start="2.2" data-duration="3.3" data-track-index="2">Puppily Delicaは食事として健康的な毎日をサポートするものであり、病気の治療や治癒を目的・保証するものではありません。持病や体調に不安がある場合は、獣医師にご相談の上でお与えください。</div>
+    <div class="clip func5-disclaimer" data-start="2.2" data-duration="3.8" data-track-index="2">Puppily Delicaは食事として健康的な毎日をサポートするものであり、病気の治療や治癒を目的・保証するものではありません。持病や体調に不安がある場合は、獣医師にご相談の上でお与えください。</div>
   </div>
 
   <script>
@@ -89,13 +89,13 @@
       // the disclaimer fades in beneath it, small charcoal-soft type, ~40% the main line's size.
       tl.to(
         "#root .func5-main",
-        { top: 380, duration: 0.7, ease: "power3.inOut" },
+        { y: -420, duration: 0.7, ease: "power3.inOut" },
         2.2
       );
       tl.fromTo(
         "#root .func5-disclaimer",
-        { opacity: 0, y: 14, top: 720 },
-        { opacity: 1, y: 0, top: 640, duration: 0.6, ease: "power3.out" },
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" },
         2.5
       );
 
