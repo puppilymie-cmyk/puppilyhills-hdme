@@ -4,6 +4,7 @@ import { siteConfig } from "@/content/site";
 const paths = [
   "",
   "/about",
+  "/founder-story",
   "/trimming",
   "/animal-hospital",
   "/puppily-delica",
