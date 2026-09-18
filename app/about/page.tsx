@@ -5,6 +5,7 @@ import { TextImageSection } from "@/components/sections/TextImageSection";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Button } from "@/components/ui/Button";
 import { StructuredData } from "@/components/StructuredData";
 import { breadcrumbJsonLd } from "@/lib/structured-data";
 import { aboutHero, philosophy, story, forWhom } from "@/content/pages/about";
@@ -41,6 +42,25 @@ export default function AboutPage() {
         image={story.image}
         imageAlt={story.imageAlt}
       />
+
+      <section className="border-y border-line bg-ivory/60">
+        <Container className="py-14 text-center sm:py-18">
+          <p className="font-display text-sm tracking-[0.3em] text-charcoal-soft/70">
+            FOUNDER STORY
+          </p>
+          <h2 className="mt-3 font-heading text-2xl leading-snug tracking-wide text-charcoal sm:text-3xl">
+            すべては、小さな命を守るために。
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-[1.9] text-charcoal-soft">
+            Founder 岸美江が語る、Puppilyの原点と、医療・美容・食・記憶と記録に込めた想い。
+          </p>
+          <div className="mt-8">
+            <Button href="/founder-story" variant="outline">
+              Founder Storyを読む
+            </Button>
+          </div>
+        </Container>
+      </section>
 
       <PointsGrid
         eyebrow={philosophy.eyebrow}
