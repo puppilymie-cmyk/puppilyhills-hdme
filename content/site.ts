@@ -35,6 +35,7 @@ export const footerNavigation = [
     heading: "Puppily Hillsについて",
     links: [
       { label: "ABOUT", href: "/about" },
+      { label: "FOUNDER STORY", href: "/founder-story" },
       { label: "TRIMMING", href: "/trimming" },
       { label: "ANIMAL HOSPITAL", href: "/animal-hospital" },
       { label: "PUPPILY DELICA", href: "/puppily-delica" },
