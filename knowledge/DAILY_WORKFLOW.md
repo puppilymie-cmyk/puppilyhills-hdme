@@ -1,3 +1,7 @@
+---
+tags: [workflow]
+---
+
 # Daily Content Workflow
 
 ## Current operating mode
@@ -62,3 +66,8 @@ Automate drafting, organization, reminders, rendering, and scheduling preparatio
 - a supervised trial period succeeds.
 
 Claude Code alone is not an avatar generator or an Instagram publishing account. External authorized services and APIs are required.
+
+## Related
+
+- [[CONTENT_SAFETY]]
+- [[INSTAGRAM_STRATEGY]]

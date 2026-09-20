@@ -1,3 +1,7 @@
+---
+tags: [content, stories]
+---
+
 # Real Stories
 
 ## Purpose
@@ -49,3 +53,8 @@ For each approved story, prepare possible uses for:
 - internal AI knowledge.
 
 A story approved for one channel is not automatically approved for all channels.
+
+## Related
+
+- [[CONTENT_SAFETY]]
+- [[INSTAGRAM_STRATEGY]]

@@ -1,3 +1,7 @@
+---
+tags: [brand/hills]
+---
+
 # Puppily Hills
 
 ## Brand role
@@ -36,3 +40,9 @@ Every touchpoint should answer:
 ## Tone
 
 Elegant, warm, emotionally honest, medically responsible, and clear. Avoid cheap urgency, exaggerated luxury language, childish clutter, or generic pet-shop phrasing.
+
+## Related
+
+- [[OWNER_AND_PHILOSOPHY]]
+- [[ANIMAL_HOSPITAL]]
+- [[BRAND_VOICE]]

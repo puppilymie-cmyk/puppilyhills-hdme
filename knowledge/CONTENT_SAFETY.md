@@ -1,3 +1,7 @@
+---
+tags: [safety, approval]
+---
+
 # Content Safety and Approval
 
 ## Public-by-default repository rule
@@ -51,3 +55,8 @@ Do not publish when:
 - the post could identify a private person or patient;
 - a generated avatar says something Mie did not approve;
 - the requested automation would bypass required approval.
+
+## Related
+
+- [[REAL_STORIES]]
+- [[DAILY_WORKFLOW]]
