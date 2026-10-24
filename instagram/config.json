@@ -1,0 +1,15 @@
+{
+  "autoPublish": false,
+  "publishingEnabled": false,
+  "killSwitchNote": "publishingEnabled を false にすると、エクスポートを含むすべての公開準備が止まります。",
+  "autoPublishPrerequisites": {
+    "instagramApprovedApiConnected": false,
+    "assetRightsAndAvatarConsentDocumented": false,
+    "accountSecurityReviewed": false,
+    "errorHandlingAndKillSwitch": false,
+    "approvalRulesTechnicallyEnforced": false,
+    "supervisedTrialSucceeded": false
+  },
+  "defaultPublishTime": "19:00",
+  "timezoneOffset": "+09:00"
+}

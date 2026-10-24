@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ig:new": "node scripts/instagram/new-post.mjs",
+    "ig:check": "node scripts/instagram/check.mjs",
+    "ig:status": "node scripts/instagram/set-status.mjs",
+    "ig:approve": "node scripts/instagram/approve.mjs",
+    "ig:queue": "node scripts/instagram/queue.mjs"
   },
   "dependencies": {
     "next": "16.3.0",

@@ -50,6 +50,10 @@ LOW RISK / REVIEW / VETERINARY REVIEW / OWNER FINAL APPROVAL.
 ### Status
 DRAFT / READY FOR REVIEW / APPROVED / SCHEDULED / PUBLISHED.
 
+## Tooling
+
+The workflow above is implemented in `instagram/` (see `instagram/README.md`) and the `instagram-daily` Claude Code skill. The scripts enforce required fields, blocked phrases, approval levels, owner approval for every post, invalidation of approvals after edits, and a publishing kill switch in `instagram/config.json`.
+
 ## Automation boundary
 
 Automate drafting, organization, reminders, rendering, and scheduling preparation first. Do not enable fully automatic public posting until:

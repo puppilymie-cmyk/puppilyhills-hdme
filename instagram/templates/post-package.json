@@ -1,0 +1,34 @@
+{
+  "id": "",
+  "status": "DRAFT",
+  "createdAt": "",
+  "proposedPublishAt": "",
+  "pillar": "",
+  "contentType": "",
+  "location": "店舗なし",
+  "purpose": "",
+  "audience": "",
+  "script": "",
+  "onScreenText": [],
+  "caption": "",
+  "hashtags": [],
+  "thumbnailText": "",
+  "visualPlan": [],
+  "assets": [],
+  "claims": [],
+  "openQuestions": [],
+  "approvalLevel": "LOW RISK",
+  "usesAvatar": false,
+  "avatarConsentRef": "",
+  "approvals": {
+    "review": null,
+    "veterinary": null,
+    "owner": null
+  },
+  "publication": {
+    "url": "",
+    "publishedAt": "",
+    "assetVersion": ""
+  },
+  "history": []
+}
