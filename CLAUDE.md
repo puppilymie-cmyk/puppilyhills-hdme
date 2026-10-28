@@ -13,6 +13,7 @@ Read and follow all imported files before writing website copy, social content, 
 @knowledge/REAL_STORIES.md
 @knowledge/CONTENT_SAFETY.md
 @knowledge/DAILY_WORKFLOW.md
+@knowledge/FITTING_ROOM.md
 
 ## Mandatory behavior
 

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#F6E3E1"/>
+  <g transform="translate(100 200)"><path d="M200 130 Q300 170 400 130 L440 230 L395 245 L390 430 Q300 460 210 430 L205 245 L160 230 Z" fill="#EFE4D6"/></g>
+  <text x="400" y="860" font-family="serif" font-size="40" fill="#55504A" text-anchor="middle" letter-spacing="6">SAMPLE</text>
+</svg>

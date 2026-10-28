@@ -52,6 +52,7 @@ app/                    ページ本体(App Router)
   shop/page.tsx            SHOP / STOREページ
   access/page.tsx          ACCESSページ
   contact/page.tsx         CONTACTページ
+  fitting-room/            LINE限定お試着ルーム(合言葉で入室。検索エンジン非掲載)
   sitemap.ts / robots.ts    SEO用ファイル
 
 components/
@@ -98,6 +99,12 @@ scripts/generate-placeholders.mjs  仮画像を生成するスクリプト(参�
 - 各ページに `metadata`(title・description・canonical)を設定し、指定のSEOキーワード(小型犬 トリミング、トイプードル トリミング、自由が丘 トリミング、大阪 トリミング、小型犬 動物病院、犬 CT MRI、犬 健康診断、犬 手作りごはん、犬 フード、犬 撮影会、愛犬 写真 等)を本文中に自然な形で含めています。
 - `app/sitemap.ts` / `app/robots.ts` でサイトマップ・クロール設定を出力しています。
 - JSON-LD構造化データ(`lib/structured-data.ts`)により、Organization / PetGroomingService / VeterinaryCare / Product / BreadcrumbList / FAQPage を各ページに埋め込み、Google検索だけでなく生成AI(ChatGPT等)からも内容を理解しやすい構成にしています。
+
+## LINE限定お試着ルーム
+
+Instagramの新作をLINE登録者だけが愛犬の写真で試着できるページ(`/fitting-room`)です。
+新作の追加方法・合言葉の運用は `knowledge/FITTING_ROOM.md` を参照してください。
+合言葉は環境変数 `FITTING_ROOM_PASSCODE` に設定します(`.env.example` 参照)。
 
 ## 本番公開前に対応が必要な項目
 

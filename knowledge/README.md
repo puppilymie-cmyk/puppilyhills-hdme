@@ -13,6 +13,7 @@ This directory contains persistent project knowledge for Claude Code and other c
 7. REAL_STORIES.md
 8. CONTENT_SAFETY.md
 9. DAILY_WORKFLOW.md
+10. FITTING_ROOM.md
 
 ## Maintenance
 
