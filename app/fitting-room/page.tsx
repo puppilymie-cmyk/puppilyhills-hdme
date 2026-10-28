@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { Container } from "@/components/ui/Container";
 import { PhotoFrame } from "@/components/ui/PhotoFrame";
-import { PasscodeForm } from "@/components/fitting-room/PasscodeForm";
 import { FittingStudio } from "@/components/fitting-room/FittingStudio";
 import { ACCESS_COOKIE, hasAccess, isFittingRoomConfigured } from "@/lib/fitting-room-access";
 import { fittingItems, fittingRoomCopy, lineAddFriendUrl } from "@/content/fitting-room";
@@ -15,9 +14,15 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default async function FittingRoomPage() {
+export default async function FittingRoomPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ status?: string | string[] }>;
+}) {
   const cookieStore = await cookies();
   const unlocked = hasAccess(cookieStore.get(ACCESS_COOKIE)?.value);
+  const { status } = await searchParams;
+  const statusMessage = typeof status === "string" ? fittingRoomCopy.status[status] : undefined;
 
   return (
     <>
@@ -42,6 +47,14 @@ export default async function FittingRoomPage() {
             <div className="mx-auto mt-14 flex max-w-3xl flex-col gap-3 border-t border-line pt-8 text-[13px] leading-[1.9] text-charcoal-soft">
               <p>{fittingRoomCopy.fitNote}</p>
               <p>{fittingRoomCopy.privacy}</p>
+              <form action="/fitting-room/logout" method="post" className="mt-2">
+                <button
+                  type="submit"
+                  className="text-[12px] tracking-[0.1em] text-charcoal-soft underline underline-offset-4 hover:text-charcoal"
+                >
+                  お試着ルームから退出する
+                </button>
+              </form>
             </div>
           </Container>
         </section>
@@ -63,17 +76,37 @@ export default async function FittingRoomPage() {
                 ))}
               </ol>
 
-              <div className="mx-auto mt-14 flex max-w-md flex-col items-center gap-10 text-center">
-                <a
-                  href={lineAddFriendUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center rounded-sm border border-charcoal bg-charcoal px-8 py-4 text-[13px] tracking-[0.15em] text-white transition-colors hover:bg-charcoal/85"
-                >
-                  LINEで友だち追加して合言葉を受け取る
-                </a>
+              <div className="mx-auto mt-14 flex max-w-md flex-col items-center gap-6 text-center">
+                {statusMessage ? (
+                  <p
+                    role="status"
+                    className="w-full rounded-sm bg-blush px-5 py-4 text-[14px] leading-[1.8] text-charcoal"
+                  >
+                    {statusMessage}
+                  </p>
+                ) : null}
                 {isFittingRoomConfigured() ? (
-                  <PasscodeForm />
+                  <>
+                    <a
+                      href="/fitting-room/login"
+                      className="inline-flex w-full items-center justify-center rounded-sm border border-charcoal bg-charcoal px-8 py-4 text-[13px] tracking-[0.15em] text-white transition-colors hover:bg-charcoal/85"
+                    >
+                      LINEでログインして入る
+                    </a>
+                    {status === "not_friend" ? (
+                      <a
+                        href={lineAddFriendUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-full items-center justify-center rounded-sm border border-charcoal/60 px-8 py-4 text-[13px] tracking-[0.15em] text-charcoal transition-colors hover:border-charcoal hover:bg-charcoal/5"
+                      >
+                        LINE公式アカウントを友だち追加する
+                      </a>
+                    ) : null}
+                    <p className="text-[12px] leading-[1.8] text-charcoal-soft">
+                      {fittingRoomCopy.loginNote}
+                    </p>
+                  </>
                 ) : (
                   <p className="text-[14px] leading-[1.9] text-charcoal-soft">
                     お試着ルームは現在準備中です。オープンはLINEでお知らせします。

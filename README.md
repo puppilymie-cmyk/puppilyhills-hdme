@@ -52,7 +52,7 @@ app/                    ページ本体(App Router)
   shop/page.tsx            SHOP / STOREページ
   access/page.tsx          ACCESSページ
   contact/page.tsx         CONTACTページ
-  fitting-room/            LINE限定お試着ルーム(合言葉で入室。検索エンジン非掲載)
+  fitting-room/            LINE限定お試着ルーム(LINEログインで友だちを確認して入室。検索エンジン非掲載)
   sitemap.ts / robots.ts    SEO用ファイル
 
 components/
@@ -103,8 +103,8 @@ scripts/generate-placeholders.mjs  仮画像を生成するスクリプト(参�
 ## LINE限定お試着ルーム
 
 Instagramの新作をLINE登録者だけが愛犬の写真で試着できるページ(`/fitting-room`)です。
-新作の追加方法・合言葉の運用は `knowledge/FITTING_ROOM.md` を参照してください。
-合言葉は環境変数 `FITTING_ROOM_PASSCODE` に設定します(`.env.example` 参照)。
+新作の追加方法・LINEログインの設定は `knowledge/FITTING_ROOM.md` を参照してください。
+LINEログインのチャネル情報と署名用の文字列を環境変数に設定します(`.env.example` 参照)。
 
 ## 本番公開前に対応が必要な項目
 
